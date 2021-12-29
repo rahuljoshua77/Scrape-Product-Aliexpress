@@ -50,7 +50,7 @@ def scrape(url):
     
     firefox_options.add_experimental_option("mobileEmulation", mobile_emulation)
     firefox_options.add_argument(f"user-agent=Mozilla/5.0 (iPad; CPU OS 11_0 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) Version/11.0 Mobile/15A5341f Safari/604.1")
-    browser = webdriver.Chrome(options=firefox_options)
+    browser = webdriver.Chrome(options=firefox_options,executable_path=f"{cwd}\\chromedriver.exe")
     myfile = open(f"{cwd}/limit.txt","r")
     limit = myfile.read()
     browser.get(url)
