@@ -1,6 +1,5 @@
 import random,time,os
 cwd = os.getcwd()
-from bs4 import BeautifulSoup
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 
@@ -12,7 +11,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
  
-name_card = random.choice(["Bellamy","Nurman","Herman","Michael","Michelle","Jeniffer","Robby"])
 mobile_emulation = {
     "deviceMetrics": { "width": 360, "height": 650, "pixelRatio": 3.4 },
     }
